@@ -19,7 +19,7 @@ from translator import Translate
 
 
 async def main():
-	async with Translate() as translator:
+	async with Translate(source_lang='en', target_lang='ru') as translator:
 		result = await translator.translate('Hello World')
 
 	return result
